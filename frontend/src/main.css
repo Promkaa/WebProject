@@ -1,4 +1,75 @@
-div:has(.MainStr){
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 900px;
+
+
+.MainStr {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 15px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    flex-wrap: wrap;
+}
+
+.MainStr button {
+    padding: 10px 25px;
+    font-size: 15px;
+    font-weight: 500;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: white;
+    color: #333;
+}
+
+
+.searchMus {
+    border-color: #f5576c;
+    color: #f5576c;
+}
+
+.searchMus:hover {
+    background-color: #f5576c;
+    color: white;
+}
+
+.MyPlaylist {
+    border-color: #4facfe;
+    color: #4facfe;
+}
+
+.MyPlaylist:hover {
+    background-color: #4facfe;
+    color: white;
+}
+
+.friendPlaylist {
+    border-color: #43e97b;
+    color: #43e97b;
+}
+
+.friendPlaylist:hover {
+    background-color: #43e97b;
+    color: white;
+}
+
+.exit {
+    border-color: #fa709a;
+    color: #fa709a;
+}
+
+.exit:hover {
+    background-color: #fa709a;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .MainStr {
+        flex-direction: column;
+    }
+    
+    .MainStr button {
+        width: 200px;
+    }
 }
