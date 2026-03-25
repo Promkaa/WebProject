@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 .MainStr {
     display: flex;
@@ -27,49 +27,48 @@
 .searchMus {
     border-color: #f5576c;
     color: #f5576c;
+    transition: transform 500ms ease;
 }
 
 .searchMus:hover {
     background-color: #f5576c;
     color: white;
+    transform: scale(1.1);
 }
 
 .MyPlaylist {
     border-color: #4facfe;
     color: #4facfe;
+    transition: transform 500ms ease;
+
 }
 
 .MyPlaylist:hover {
     background-color: #4facfe;
     color: white;
+    transform: scale(1.1);
 }
 
 .friendPlaylist {
     border-color: #43e97b;
     color: #43e97b;
+    transition: transform 500ms ease;
 }
 
 .friendPlaylist:hover {
     background-color: #43e97b;
     color: white;
+    transform: scale(1.1);
 }
 
 .exit {
     border-color: #fa709a;
     color: #fa709a;
+    transition: transform 500ms ease;
 }
 
 .exit:hover {
     background-color: #fa709a;
     color: white;
-}
-
-@media (max-width: 768px) {
-    .MainStr {
-        flex-direction: column;
-    }
-    
-    .MainStr button {
-        width: 200px;
-    }
+    transform: scale(1.1);
 }

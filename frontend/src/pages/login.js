@@ -1,5 +1,4 @@
 import React from "react";
-import './login.css'
 
 class Login extends React.Component{
     state = {
@@ -15,9 +14,8 @@ class Login extends React.Component{
     });
   };
 
-  // Обработчик отправки формы
     handleSubmit = (e) => {
-        e.preventDefault(); // предотвращаем перезагрузку страницы
+        e.preventDefault();
         console.log("Form submitted:", this.state);
     };
 
@@ -61,7 +59,7 @@ class Login extends React.Component{
                     <button type="submit">Войти</button>
 
                     <div className="register-link">
-                        <center><p>Нет аккаунта? <a href="#">Регистрация</a></p></center>
+                        <center><p>Нет аккаунта?</p></center>
                     </div>
 
                 </form>
