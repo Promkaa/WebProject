@@ -1,4 +1,5 @@
 import React from "react";
+import Pleer from "../components/pleer"
 
 class MainStr extends React.Component{
     render(){
@@ -7,6 +8,7 @@ class MainStr extends React.Component{
             <button className="MyPlaylist">Мой плейлист</button>
             <button className="friendPlaylist">Плейлисты друзей</button>
             <button className="exit">Выйти</button>
+            <Pleer />
         </div>)
     }
 }

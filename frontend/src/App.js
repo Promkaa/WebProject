@@ -3,12 +3,11 @@ import Login from './pages/login'
 import './index'
 import './css/main.css'
 import MainStr from './pages/main';
-// <Login /> <-- вставлять нужное ниже в <div>
+//  <-- вставлять нужное ниже в <div>
 class App extends React.Component{
   render(){return(<div>
+    <MainStr />
   
-    
-  <MainStr />
   </div>
   )
 }

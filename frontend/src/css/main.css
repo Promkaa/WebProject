@@ -72,3 +72,71 @@
     color: white;
     transform: scale(1.1);
 }
+
+body {
+  background-color: #e5e5e5;
+}
+
+.App {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.component {
+  background-color: white;
+  width: 100%;
+  padding-bottom: 2em;
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}  
+
+.title
+
+.musicCover {
+  border-radius: 10%;
+}
+
+.playButton {
+    margin: 0px 50px 0px;
+  background: none;
+  border: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.playButton:hover{
+    background-color: #ffa3bf;
+    color: white;
+    transform: scale(1.1);
+}
+
+.subTitle {
+  margin-top: -1em;
+  color: #4f4f4f;
+}
+
+.time {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  color: #828282;
+  font-size: smaller;
+}
+
+.timeline {
+  width: 80%;
+  background-color: #27ae60;
+}
+
+input[type="range"] {
+  background-color: #27ae60;
+}
+
+@media (max-width: 900px) {
+  .component {
+    width: 50%;
+  }
+}
