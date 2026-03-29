@@ -49,13 +49,13 @@
     transform: scale(1.1);
 }
 
-.friendPlaylist {
+.Playlist {
     border-color: #43e97b;
     color: #43e97b;
     transition: transform 500ms ease;
 }
 
-.friendPlaylist:hover {
+.Playlist:hover {
     background-color: #43e97b;
     color: white;
     transform: scale(1.1);
@@ -69,6 +69,18 @@
 
 .exit:hover {
     background-color: #fa709a;
+    color: white;
+    transform: scale(1.1);
+}
+
+.golosa{
+      border-color: #fa9c70;
+    color: #fa9c70;
+    transition: transform 500ms ease;
+}
+
+.golosa:hover {
+    background-color: #fa9c70;
     color: white;
     transform: scale(1.1);
 }

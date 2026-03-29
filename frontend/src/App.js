@@ -1,5 +1,5 @@
 import React from 'react';
-import Login from './pages/login'
+// import Login from './pages/login'
 import './index'
 import './css/main.css'
 import MainStr from './pages/main';

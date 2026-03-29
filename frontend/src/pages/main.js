@@ -5,8 +5,9 @@ class MainStr extends React.Component{
     render(){
         return(<div className="MainStr">
             <button className="searchMus">Поиск музыки</button>
-            <button className="MyPlaylist">Мой плейлист</button>
-            <button className="friendPlaylist">Плейлисты друзей</button>
+            <button className="golosa">Голосование</button>
+            <button className="MyPlaylist">Мои плейлисты</button>
+            <button className="Playlist">Текущий плейлист</button>
             <button className="exit">Выйти</button>
             <Pleer />
         </div>)
