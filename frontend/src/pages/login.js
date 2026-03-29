@@ -32,7 +32,7 @@ class Login extends React.Component {
   render() {
     return (
       <div className="login">
-        
+        <title>Логин</title>
         <form onSubmit={this.handleSubmit}>
             <center><header>Привет</header></center>
           <h1>Авторизация</h1>
@@ -70,7 +70,7 @@ class Login extends React.Component {
           <button type="submit">Войти</button>
 
           <div className="register-link">
-            <center><p>Нет аккаунта?</p></center>
+          <button type="register">Регистрация</button>
           </div>
         </form>
       </div>

@@ -1,13 +1,11 @@
-import React from "react";
-import Pleer from "../components/pleer";
-import Poisk from "./poisk";
-import Golosa from "./golosa";
-import Myplaylist from "./myPlaylist";
-import TekushiyPL from "./TekushiyPlayList";
-import Login from "./login";
+import React from "react"
+import Poisk from "../pages/poisk";
+import Golosa from "../pages/golosa";
+import Myplaylist from "../pages/myPlaylist";
+import TekushiyPL from "../pages/TekushiyPlayList";
+import Login from "../pages/login";
 
-
-class MainStr extends React.Component{
+class Buttons extends React.Component{
 
     state = {
         showSearch: false,
@@ -49,7 +47,6 @@ class MainStr extends React.Component{
     }
 
     handleLogout = () => {
-
         if (this.props.onLogout) {
             this.props.onLogout();
         }
@@ -90,11 +87,9 @@ class MainStr extends React.Component{
                 <button className="exit" onClick={this.handleLogout}>
                     Выйти
                 </button>
-                
-                <Pleer />
             </div>
         )
     }
 }
 
-export default MainStr;
+export default Buttons

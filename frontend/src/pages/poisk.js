@@ -5,7 +5,7 @@ import { AiFillPlayCircle, AiFillPauseCircle } from "react-icons/ai";
 import Pleer from '../components/pleer';
 import { IconContext } from "react-icons";
 
-const Poisk = () => {
+const Poisk = ({onBack}) => {
   const [searchTerm, setSearchTerm] = useState('');
   const tracks = [
     { id: 1, title: 'Bohemian Rhapsody', artist: 'Queen', duration: '5:55', album: 'A Night at the Opera' },
@@ -46,8 +46,15 @@ const Poisk = () => {
     setSearchTerm(e.target.value);
   };
 
+  const handleBack = () => {
+    if (onBack) {
+        onBack(); 
+    }
+};
+
   return (
     <div className="poisk-container">
+        <title>Поиск песен</title>
       <SearchBar 
         onChange={handleSearchChange}
         placeholder="Поиск треков по названию, исполнителю или альбому..."
