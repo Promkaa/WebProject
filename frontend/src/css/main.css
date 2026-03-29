@@ -12,7 +12,7 @@
     align-items: start;
     gap: 15px;
     padding: 20px;
-    background-color: #f5f5f5;
+    background-color: #3f3f3f;
     min-height: 100vh;
     flex-wrap: wrap;
 }
@@ -25,10 +25,9 @@
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s ease;
-    background-color: white;
-    color: #333;
+    background-color: rgb(119, 119, 119);
+    color: #ffffff;
 }
-
 
 .searchMus {
     border-color: #f5576c;
@@ -271,8 +270,191 @@ input[type="range"] {
   background-color: #27ae60;
 }
 
-@media (max-width: 900px) {
-  .component {
-    width: 50%;
-  }
+.search-wrapper {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
 }
+
+.Search {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 60px;
+    background: white;
+    transition: all 0.3s ease;
+    margin-bottom: 1%;
+}
+
+.Search:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.Search:focus-within {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.SearchSpan {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #667eea;
+    z-index: 1;
+}
+
+.SearchInput {
+    width: 100%;
+    padding: 18px 25px 18px 55px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    border-radius: 60px;
+    outline: none;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    background: rgb(138, 138, 138);
+    color: #333;
+    font-weight: 500;
+}
+
+.SearchInput:focus {
+    border-color: #ff9900;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.SearchInput::placeholder {
+    color: #d3d3d3;
+    font-weight: 400;
+}
+
+.poisk-container {
+    min-height: 100vh;
+    padding: 30px 20px;
+    background: #383838;
+}
+
+.poisk{
+  color:#e5e5e5;
+}
+
+.tracks-list {
+  font-family: 'Montserrat', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 20px;
+}
+
+.track-title{
+  font-size: 100%;
+  font-weight: 600;
+}
+
+.track-artist{
+  font-size: 90%
+}
+
+.track-duration {
+      margin-left: auto; /* Прижимает к правому краю */
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.track-item {
+    background: rgba(167, 167, 167, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.track-item:hover {
+    transform: scale(1.1);
+}
+
+.no-results {
+    text-align: center;
+    padding: 60px 20px;
+    margin: 0 auto;
+    color:#e5e5e5;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.tracks-count{
+    text-align: center;
+    margin: 0 auto;
+    color:#e5e5e5;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .search-header h2 {
+        font-size: 22px;
+    }
+    
+    .back-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    
+    .SearchInput {
+        padding: 14px 20px 14px 50px;
+        font-size: 14px;
+    }
+    
+    .SearchSpan {
+        font-size: 18px;
+        left: 18px;
+    }
+    
+    .track-item {
+        padding: 12px 16px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .track-info {
+        flex: 1 1 100%;
+    }
+    
+    .track-title {
+        font-size: 16px;
+    }
+    
+    .track-duration {
+        margin: 0 10px 0 0;
+    }
+    
+    .play-track-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .poisk-container {
+        padding: 20px 15px;
+    }
+    
+    .search-header {
+        margin-bottom: 25px;
+    }
+    
+    .track-item:hover {
+        transform: translateX(0) translateY(-2px);
+    }
+}
+
