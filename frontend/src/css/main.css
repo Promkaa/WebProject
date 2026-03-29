@@ -17,7 +17,11 @@
     flex-wrap: wrap;
 }
 
-.MainStr button {
+.MainStr .searchMus,
+.MainStr .golosa,
+.MainStr .MyPlaylist,
+.MainStr .Playlist,
+.MainStr .exit {
     padding: 10px 25px;
     font-size: 15px;
     font-weight: 500;
@@ -217,53 +221,69 @@ body {
   text-align: center;
 }
 
+/*Плеер*/
 .component {
-  background-color: white;
+  background-color: rgb(95, 95, 95);
   width: 100%;
-  padding-bottom: 2em;
+  padding-bottom: 1em;
   position: fixed;
   bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
+  font-family: 'Montserrat', sans-serif;
 }  
 
-.title
+.nameTrack{
+  color: white;
+}
 
 .musicCover {
   border-radius: 10%;
 }
 
 .playButton {
-    margin: 0px 50px 0px;
-  background: none;
-  border: none;
-  align-items: center;
-  justify-content: center;
+    padding: 10px 25px;
+    font-size: 15px;
+    font-weight: 500;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: rgb(95, 95, 95);
+    color: #ffffff;
+    margin: 0px 50px 0px
 }
 
 .playButton:hover{
-    background-color: #ffa3bf;
+    background-color: #ffffff;
     color: white;
     transform: scale(1.1);
 }
 
+.title{
+  margin-bottom: 1%;
+  margin-left: 1%;
+}
+
 .subTitle {
+  margin-left: 1%;
   margin-top: -1em;
-  color: #4f4f4f;
+  color: #ffffff;
 }
 
 .time {
   margin: 0 auto;
-  width: 80%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
-  color: #828282;
+  color: #ffffff;
   font-size: smaller;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .timeline {
-  width: 80%;
-  background-color: #27ae60;
+  width: 90%;
+  background-color: #03ff6c;
 }
 
 input[type="range"] {

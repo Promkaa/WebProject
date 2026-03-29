@@ -76,7 +76,7 @@ const Pleer = () => {
     <div className="component">
     
       <audio ref={audioRef} src={track} preload="metadata" />
-      <div>
+      <div className="nameTrack">
         <h3 className="title">Название</h3>
         <p className="subTitle">Автор</p>
       </div>
