@@ -40,21 +40,21 @@
 
 ## Технологический стек
 1.	**Frontend:**
-Framework: React (Vite для быстрой сборки).
-Real-time: Socket.io-client (для мгновенного обновления очереди и синхронизации статуса плеера).
-UI Kit: Tailwind CSS + Headless UI (или Mantine) для быстрого верстания адаптивных интерфейсов.
-QR Generation: qrcode.react.
+**Framework:** React (Vite для быстрой сборки).
+**Real-time:** Socket.io-client (для мгновенного обновления очереди и синхронизации статуса плеера).
+**UI Kit:** Tailwind CSS + Headless UI (или Mantine) для быстрого верстания адаптивных интерфейсов.
+**QR Generation:** qrcode.react.
 2.	**Backend:**
-Framework: Django + Django REST Framework (DRF).
-Async/Real-time: Django Channels (необходим для WebSocket соединений, чтобы хост и гости видели изменения очереди в реальном времени без перезагрузки).
+**Framework:** Django + Django REST Framework (DRF).
+**Async/Real-time:** Django Channels (необходим для WebSocket соединений, чтобы хост и гости видели изменения очереди в реальном времени без перезагрузки).
 3.	**Database:**
 PostgreSQL: Хранение пользователей (если нужна авторизация), сессий (комнат), истории голосований, структуры плейлистов.
 4.	**Media Storage & VK Integration:**
-VK Music API: Используется как источник аудио-потоков и метаданных (обложки, названия).
-Krutoy-pirat database – современная отечественная разработка на основе технологий zaycev.net, utorrent и др. (для тестов)
+**VK Music API:** Используется как источник аудио-потоков и метаданных (обложки, названия).
+**Krutoy-pirat database** – современная отечественная разработка на основе технологий zaycev.net, utorrent и др. (для тестов)**
 5.	**Infrastructure:**
-Nginx: Reverse proxy. Раздает статику (React build) и проксирует запросы к Django.
-Docker: Для контейнеризации (Django, DB, Nginx).
+**Nginx: Reverse proxy.** Раздает статику (React build) и проксирует запросы к Django.
+**Docker:** Для контейнеризации (Django, DB, Nginx).
 
 ##  Краткий концепт 
 Суть: Веб-приложение для совместного создания плейлистов на вечеринках. Гости подключаются через смартфоны, добавляют треки из VK и голосуют за очередь.
