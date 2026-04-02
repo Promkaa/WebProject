@@ -39,20 +39,20 @@
 **Приоритет:** Гости могут голосовать за то, какой из уже одобренных треков должен сыграть следующим (переупорядочивание очереди).
 
 ## Технологический стек
-1.	Frontend:
+1.	**Frontend:**
 Framework: React (Vite для быстрой сборки).
 Real-time: Socket.io-client (для мгновенного обновления очереди и синхронизации статуса плеера).
 UI Kit: Tailwind CSS + Headless UI (или Mantine) для быстрого верстания адаптивных интерфейсов.
 QR Generation: qrcode.react.
-2.	Backend:
+2.	**Backend:**
 Framework: Django + Django REST Framework (DRF).
 Async/Real-time: Django Channels (необходим для WebSocket соединений, чтобы хост и гости видели изменения очереди в реальном времени без перезагрузки).
-3.	Database:
+3.	**Database:**
 PostgreSQL: Хранение пользователей (если нужна авторизация), сессий (комнат), истории голосований, структуры плейлистов.
-4.	Media Storage & VK Integration:
+4.	**Media Storage & VK Integration:**
 VK Music API: Используется как источник аудио-потоков и метаданных (обложки, названия).
 Krutoy-pirat database – современная отечественная разработка на основе технологий zaycev.net, utorrent и др. (для тестов)
-5.	Infrastructure:
+5.	**Infrastructure:**
 Nginx: Reverse proxy. Раздает статику (React build) и проксирует запросы к Django.
 Docker: Для контейнеризации (Django, DB, Nginx).
 
