@@ -1,23 +1,27 @@
-from django.conf import settings
-from django.db import connection
+import psycopg2
+from config import host, user, password, db_name, port
 
-settings.configure(
-    DATABASES={
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'music.db', 
-            'USER': 'postgres',   
-            'PASSWORD': '1', 
-            'HOST': 'localhost',
-            'PORT': '5432',
-        }
-    }
-)
+try:
+    connection = psycopg2.connect(
+        host=host,
+        user=user,
+        password=password,
+        database=db_name,
+        port=port
+    )
 
-import django
-django.setup()
+    cursor = connection.cursor()
 
-connection.ensure_connection()
-print("подключение установлено")
-print(connection.connection)
+    with connection.cursor() as cursor:
+        cursor.execute(
+            "SELECT * FROM music_tracks;"
+        )
+        print(f"Песня: {cursor.fetchone()}")
 
+    pass
+except Exception as _ex:
+    print("[INFO] Ошибка при подключении к БД", _ex)
+finally:
+    if connection:
+        connection.close()
+        print("[INFO] Подключение к бд закрыто")
