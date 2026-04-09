@@ -29,6 +29,26 @@ COMMENT ON DATABASE "music.db"
     IS 'База данных для хранения названий, авторов, метаданных и пути трека на диске';
 ```
 ## Таблицы
+### Таблица музыки, которая работает с backend'ом
+```
+-- Table: public.music_tracks
+
+-- DROP TABLE IF EXISTS public.music_tracks;
+
+CREATE TABLE IF NOT EXISTS public.music_tracks
+(
+    id integer NOT NULL DEFAULT nextval('music_tracks_id_seq'::regclass),
+    title character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    audio_data bytea NOT NULL,
+    CONSTRAINT music_tracks_pkey PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.music_tracks
+    OWNER to postgres;
+```
+
 ### Пользователи
 ```
 
