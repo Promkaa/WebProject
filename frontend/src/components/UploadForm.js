@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const API_HOST = 'http://192.168.31.144:8000' || 'http://localhost:8000';
+const API_HOST = 'http://localhost:8000'; // тут надо добавить ip для телефонов или переписать это прикол в целом
 
 const UploadForm = () => {
     const [selectedFile, setSelectedFile] = useState(null);

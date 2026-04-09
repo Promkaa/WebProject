@@ -56,7 +56,6 @@ class MainStr extends React.Component{
     }
 
     render() {
-        // Проверяем какая страница должна отображаться
         if (this.state.showSearch) {
             return <Poisk onBack={this.closeSearchPage} />
         }

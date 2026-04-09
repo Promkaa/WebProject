@@ -40,9 +40,8 @@ const Poisk = ({onBack}) => {
     } finally {
       setLoading(false); 
     }
-  }, []); // Пустой массив зависимостей, так как API_URL теперь снаружи
+  }, []);
 
-  // Вызываем fetchTracks при первой загрузке компонента
   useEffect(() => {
     fetchTracks();
   }, [fetchTracks]); 
@@ -58,7 +57,7 @@ const Poisk = ({onBack}) => {
   }, [tracks]);
 
   const getFilteredTracks = () => {
-    if (!Array.isArray(tracks)) return []; // Защита от падения, если tracks не массив
+    if (!Array.isArray(tracks)) return [];
     if (!searchTerm.trim()) {
       return tracks;
     }
@@ -88,7 +87,6 @@ const Poisk = ({onBack}) => {
         placeholder="Поиск треков по названию или исполнителю..."
         value={searchTerm}
       />
-      {/* РЕШЕНИЕ ПРОБЛЕМЫ №1 (Часть 2): Передаем функцию как prop */}
       <UploadForm onUploadSuccess={fetchTracks} />
       
       <div className="tracks-list">
@@ -97,7 +95,6 @@ const Poisk = ({onBack}) => {
             <div key={track.id} className="track-item">
               <div className="track-info">
                 <div className="track-title">{track.title}</div>
-                {/* Теперь это поле будет отображаться */}
                 <div className="track-artist">{track.artist}</div>
               </div>
               <div className="track-duration">{track.duration}</div>
