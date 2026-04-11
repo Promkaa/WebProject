@@ -1,7 +1,7 @@
 import React from "react";
 import Pleer from "../components/pleer";
 import Poisk from "./poisk";
-import Golosa from "./golosa";
+import MkRoom from "./makeRoom";
 import Myplaylist from "./myPlaylist";
 import TekushiyPL from "./TekushiyPlayList";
 
@@ -11,7 +11,7 @@ class MainStr extends React.Component{
 
     state = {
         showSearch: false,
-        showGolosa: false,
+        showMkRoom: false,
         showMyPlaylist: false,
         showPlayList: false
     }
@@ -24,12 +24,12 @@ class MainStr extends React.Component{
         this.setState({showSearch: false})
     }
 
-    openGolosa = () => {
-        this.setState({showGolosa: true})
+    openMkRoom = () => {
+        this.setState({showMkRoom: true})
     }
 
-    closeGolosa = () => {
-        this.setState({showGolosa: false})
+    closeMkRoom = () => {
+        this.setState({showMkRoom: false})
     }
 
     openMyPlaylist = () => {
@@ -60,8 +60,8 @@ class MainStr extends React.Component{
             return <Poisk onBack={this.closeSearchPage} />
         }
         
-        if (this.state.showGolosa) {
-            return <Golosa onBack={this.closeGolosa} />
+        if (this.state.showMkRoom) {
+            return <MkRoom onBack={this.closeMkRoom} />
         }
         
         if (this.state.showMyPlaylist) {
@@ -77,8 +77,8 @@ class MainStr extends React.Component{
                 <button className="searchMus" onClick={this.openSearchPage}>
                     Поиск музыки
                 </button>
-                <button className="golosa" onClick={this.openGolosa}>
-                    Голосование
+                <button className="MkRoom" onClick={this.openMkRoom}>
+                    Создание комнаты
                 </button>
                 <button className="MyPlaylist" onClick={this.openMyPlaylist}>
                     Мои плейлисты

@@ -6,16 +6,13 @@ import './css/main.css';
 
 class App extends React.Component {
   state = {
-    isLoggedIn: false  // Состояние авторизации
+    isLoggedIn: false 
   };
 
-  // Функция для входа
   handleLogin = () => {
-    // Здесь можно добавить проверку логина/пароля
     this.setState({ isLoggedIn: true });
   };
 
-  // Функция для выхода
   handleLogout = () => {
     this.setState({ isLoggedIn: false });
   };
@@ -26,9 +23,9 @@ class App extends React.Component {
     return (
       <div>
         {isLoggedIn ? (
-          <MainStr onLogout={this.handleLogout} />  // Передаем функцию выхода
+          <MainStr onLogout={this.handleLogout} />  
         ) : (
-          <Login onLogin={this.handleLogin} />       // Передаем функцию входа
+          <Login onLogin={this.handleLogin} />     
         )}
       </div>
     );

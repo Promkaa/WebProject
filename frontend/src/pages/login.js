@@ -25,7 +25,7 @@ class Login extends React.Component {
         this.props.onLogin();
       }
     } else {
-      alert("Пожалуйста, введите логин и пароль");
+      alert("Пожалуйста, введите логин");
     }
   };
 
@@ -47,17 +47,6 @@ class Login extends React.Component {
             />
           </div>
 
-          <div className="input-box">
-            <input 
-              type="password"
-              name="password" 
-              placeholder="Введите пароль" 
-              value={this.state.password}
-              onChange={this.handleInputChange}
-              required 
-            />
-          </div>
-
           <div className="remember">
             <input 
               type="checkbox" 
@@ -68,10 +57,6 @@ class Login extends React.Component {
           </div>
 
           <button type="submit">Войти</button>
-
-          <div className="register-link">
-          <button type="register">Регистрация</button>
-          </div>
         </form>
       </div>
     );

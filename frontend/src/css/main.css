@@ -21,7 +21,7 @@
 /* БЛОК КНОПОК В MAINSTR */
 
 .MainStr .searchMus,
-.MainStr .golosa,
+.MainStr .MkRoom,
 .MainStr .MyPlaylist,
 .MainStr .Playlist,
 .MainStr .exit {
@@ -85,13 +85,13 @@
     transform: scale(1.1);
 }
 
-.golosa{
+.MkRoom{
       border-color: #fa9c70;
     color: #fa9c70;
     transition: transform 500ms ease;
 }
 
-.golosa:hover {
+.MkRoom:hover {
     background-color: #fa9c70;
     color: white;
     transform: scale(1.1);
@@ -439,7 +439,7 @@ input[type="range"] {
     }
     
     .MainStr .searchMus,
-    .MainStr .golosa,
+    .MainStr .MkRoom,
     .MainStr .MyPlaylist,
     .MainStr .Playlist,
     .MainStr .exit {
@@ -457,7 +457,7 @@ input[type="range"] {
     }
     
     .MainStr .searchMus,
-    .MainStr .golosa,
+    .MainStr .MkRoom,
     .MainStr .MyPlaylist,
     .MainStr .Playlist,
     .MainStr .exit {
@@ -471,7 +471,7 @@ input[type="range"] {
     .MyPlaylist:hover,
     .Playlist:hover,
     .exit:hover,
-    .golosa:hover {
+    .MkRoom:hover {
         transform: scale(1.05);
     }
 }
@@ -487,7 +487,7 @@ input[type="range"] {
     }
     
     .MainStr .searchMus,
-    .MainStr .golosa,
+    .MainStr .MkRoom,
     .MainStr .MyPlaylist,
     .MainStr .Playlist,
     .MainStr .exit {
@@ -503,7 +503,7 @@ input[type="range"] {
     .MyPlaylist:hover,
     .Playlist:hover,
     .exit:hover,
-    .golosa:hover {
+    .MkRoom:hover {
         transform: scale(1);
     }
     
@@ -512,7 +512,7 @@ input[type="range"] {
     .MyPlaylist:active,
     .Playlist:active,
     .exit:active,
-    .golosa:active {
+    .MkRoom:active {
         transform: scale(0.98);
         opacity: 0.9;
     }
@@ -527,7 +527,7 @@ input[type="range"] {
     }
     
     .MainStr .searchMus,
-    .MainStr .golosa,
+    .MainStr .MkRoom,
     .MainStr .MyPlaylist,
     .MainStr .Playlist,
     .MainStr .exit {
@@ -547,7 +547,7 @@ input[type="range"] {
     }
     
     .MainStr .searchMus,
-    .MainStr .golosa,
+    .MainStr .MkRoom,
     .MainStr .MyPlaylist,
     .MainStr .Playlist,
     .MainStr .exit {
@@ -567,7 +567,7 @@ input[type="range"] {
     }
     
     .MainStr .searchMus,
-    .MainStr .golosa,
+    .MainStr .MkRoom,
     .MainStr .MyPlaylist,
     .MainStr .Playlist,
     .MainStr .exit {
