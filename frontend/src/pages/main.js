@@ -4,6 +4,7 @@ import Poisk from "./poisk";
 import MkRoom from "./makeRoom";
 import Myplaylist from "./myPlaylist";
 import TekushiyPL from "./TekushiyPlayList";
+import Nick from "../components/nick"
 
 //надо кнопки перенести в отдельный файл, чтобы их можно было использовать на каждой странице
 
@@ -89,7 +90,7 @@ class MainStr extends React.Component{
                 <button className="exit" onClick={this.handleLogout}>
                     Выйти
                 </button>
-                
+                <Nick username={this.props.username} />
                 <Pleer />
             </div>
         )

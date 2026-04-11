@@ -21,7 +21,7 @@ class Login extends React.Component {
       console.log("Form submitted:", this.state);
       
       if (this.props.onLogin) {
-        this.props.onLogin();
+        this.props.onLogin(this.state.login);
       }
     } else {
       alert("Пожалуйста, введите логин");

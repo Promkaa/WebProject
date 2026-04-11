@@ -17,6 +17,11 @@
     flex-wrap: wrap;
 }
 
+.Nickname{
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+
 /* ========================================================= */
 /* БЛОК КНОПОК В MAINSTR */
 

@@ -6,24 +6,29 @@ import './css/main.css';
 
 class App extends React.Component {
   state = {
-    isLoggedIn: false 
+    isLoggedIn: false, 
+    username: ''
   };
 
-  handleLogin = () => {
-    this.setState({ isLoggedIn: true });
+  handleLogin = (username) => {
+    this.setState({ 
+      isLoggedIn: true,
+    username: username });
   };
 
   handleLogout = () => {
-    this.setState({ isLoggedIn: false });
+    this.setState({ 
+      isLoggedIn: false,
+      username: '' });
   };
 
   render() {
-    const { isLoggedIn } = this.state;
+    const { isLoggedIn, username } = this.state;
 
     return (
       <div>
         {isLoggedIn ? (
-          <MainStr onLogout={this.handleLogout} />  
+          <MainStr onLogout={this.handleLogout} username={username} />  
         ) : (
           <Login onLogin={this.handleLogin} />     
         )}
