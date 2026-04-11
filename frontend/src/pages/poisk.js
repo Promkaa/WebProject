@@ -81,6 +81,7 @@ const Poisk = ({onBack}) => {
 
   return (
     <div className="poisk-container">
+      
         <title>Поиск песен</title>
       <SearchBar 
         onChange={handleSearchChange}
