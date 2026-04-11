@@ -1,13 +1,16 @@
 import React from "react";
 import Pleer from "../components/pleer";
 
-//надо кнопки перенести в отдельный файл, чтобы их можно было использовать на каждой странице
+//главная страница пустая 
 
 class MainStr extends React.Component{
 
     render() {     
         return (
             <div className="MainStr">            
+                <title>Плейлист-коллаборатор</title>
+                <h1>Добро пожаловать</h1>
+                <p>Выбери в панели сверху куда ты хочешь попасть</p>
                 <Pleer />
             </div>
         )

@@ -5,7 +5,7 @@ import Poisk from "./pages/poisk";
 import MkRoom from "./pages/makeRoom";
 import Myplaylist from "./pages/myPlaylist";
 import TekushiyPL from "./pages/TekushiyPlayList";
-import Navigation from './components/Navigation'; // Путь может отличаться
+import Navigation from './components/Navigation';
 import './index';
 import './css/main.css';
 
@@ -40,6 +40,8 @@ class App extends React.Component {
     const { currentPage } = this.state;
     
     switch(currentPage) {
+      case 'main':
+        return <MainStr username={this.state.username} onLogout={this.handleLogout} />;
       case 'search':
         return <Poisk onBack={() => this.navigateTo('main')} />;
       case 'mkRoom':
@@ -54,7 +56,7 @@ class App extends React.Component {
   };
 
   render() {
-    const { isLoggedIn, username, currentPage } = this.state;
+    const { isLoggedIn, username } = this.state;
 
     if (!isLoggedIn) {
       return <Login onLogin={this.handleLogin} />;
@@ -63,6 +65,7 @@ class App extends React.Component {
     return (
       <div className="app-container">
         <Navigation 
+          onMain={() => this.navigateTo('main')}   
           onSearch={() => this.navigateTo('search')}
           onMkRoom={() => this.navigateTo('mkRoom')}
           onMyPlaylist={() => this.navigateTo('myPlaylist')}
