@@ -4,7 +4,6 @@ import '../css/main.css'
 class Login extends React.Component {
   state = {
     login: "",
-    password: "",
     remember: false
   };
 
@@ -18,7 +17,7 @@ class Login extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     
-    if (this.state.login && this.state.password) {
+    if (this.state.login) {
       console.log("Form submitted:", this.state);
       
       if (this.props.onLogin) {
