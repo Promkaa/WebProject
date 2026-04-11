@@ -1,8 +1,6 @@
 import React from "react";
 import Pleer from "../components/pleer";
 
-//главная страница пустая 
-
 class MainStr extends React.Component{
 
     render() {     

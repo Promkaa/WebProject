@@ -3,7 +3,6 @@ import Login from './pages/login';
 import MainStr from './pages/main';
 import Poisk from "./pages/poisk";
 import MkRoom from "./pages/makeRoom";
-import Myplaylist from "./pages/myPlaylist";
 import TekushiyPL from "./pages/TekushiyPlayList";
 import Navigation from './components/Navigation';
 import './index';
@@ -46,8 +45,6 @@ class App extends React.Component {
         return <Poisk onBack={() => this.navigateTo('main')} />;
       case 'mkRoom':
         return <MkRoom onBack={() => this.navigateTo('main')} />;
-      case 'myPlaylist':
-        return <Myplaylist onBack={() => this.navigateTo('main')} />;
       case 'playlist':
         return <TekushiyPL onBack={() => this.navigateTo('main')} />;
       default:
@@ -68,7 +65,6 @@ class App extends React.Component {
           onMain={() => this.navigateTo('main')}   
           onSearch={() => this.navigateTo('search')}
           onMkRoom={() => this.navigateTo('mkRoom')}
-          onMyPlaylist={() => this.navigateTo('myPlaylist')}
           onPlaylist={() => this.navigateTo('playlist')}
           onLogout={this.handleLogout}
           username={username}

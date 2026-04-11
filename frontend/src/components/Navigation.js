@@ -8,7 +8,6 @@ const Navigation = ({ onSearch, onMkRoom, onMyPlaylist, onPlaylist, onMain, onLo
         <button onClick={onMain}>Главная страница</button>
         <button onClick={onSearch}>Поиск музыки</button>
         <button onClick={onMkRoom}>Создание комнаты</button>
-        <button onClick={onMyPlaylist}>Мои плейлисты</button>
         <button onClick={onPlaylist}>Текущий плейлист</button>
         <button onClick={onLogout}>Выйти</button>
       </div>
